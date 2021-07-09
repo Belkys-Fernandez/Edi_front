@@ -8,3 +8,34 @@ for (var i = 0; i < cajita.length; i++) {/* lo recorro y "cuento" los elementos 
     }
   });
 }
+
+//FUNCION PARA CARGAR
+function peticionCargarProductos(){
+ 
+
+  xmlhttp = new XMLHttpRequest();//clase del sistema ,para hacer peticion nesecitamos un objeto de esta clase
+
+  xmlhttp.onreadystatechange = function () {//onreadystatechange :metodo de respuesta
+      if (xmlhttp.readyState == XMLHttpRequest.DONE) {//Done:termino
+          if (xmlhttp.status == 200) {//200:volvio todo bien
+            var productosEncontrados=  JSON.parse(xmlhttp.responseText);
+
+            alert (productosEncontrados);
+           
+
+                
+
+          }
+          else{
+
+            }
+
+      }
+  }
+  //vervo + ruta + true o falso  y concatenar +'/' + variable 
+  xmlhttp.open("GET",'https://edi-backend.herokuapp.com/Productos/listaProducto',true);//true:asincronico, false:sincronica
+  xmlhttp.send();//SEND:ENVIAR
+}
+/*
+xmlhttp.responseText
+*/
