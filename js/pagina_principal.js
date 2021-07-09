@@ -20,7 +20,7 @@ function peticionCargarProductos(){
           if (xmlhttp.status == 200) {//200:volvio todo bien
             var productosEncontrados=  JSON.parse(xmlhttp.responseText);
 
-            alert (productosEncontrados);
+          console.log(productosEncontrados);
            
 
                 
