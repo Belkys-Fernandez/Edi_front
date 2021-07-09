@@ -1,3 +1,11 @@
+window.addEventListener('load', load);
+
+function load() {
+  peticionCargarProductos();
+
+ }
+
+
 var cajita = document.getElementsByClassName('formulario__input');/*Selecciono todos los elementos que tengan la clase 'tal' que quiero validar */ 
 for (var i = 0; i < cajita.length; i++) {/* lo recorro y "cuento" los elementos que hay con length*/
   cajita[i].addEventListener('keyup', function(){ /* keyup es el evento que evalua que es lo que pasa cuando dejo de escribir, en este caso en el formulario*/
@@ -44,7 +52,7 @@ function peticionCargarProductos(){
                   '<td class="table-white">' + data[i].presentacion+ '</td>' +
                   '<td class="table-white">' + data[i]. descripcion + '</td>' +
                   '<td class="table-white">' + data[i].valor + '</td>' +
-                  '<td class="table-white"> <img src=" '+ data[i].imagen + ' " >     </td>' +
+                  '<td class="table-white"> <img src=" '+ data[i].imagen + ' "  alt="Girl in a jacket">     </td>' +
                   
                   '</tr>' ;
 
