@@ -10,6 +10,9 @@ for (var i = 0; i < cajita.length; i++) {/* lo recorro y "cuento" los elementos 
 }
 
 //FUNCION PARA CARGAR
+let con = document.getElementById('con');
+let colum = document.getElementById('nombre_columnas');
+
 function peticionCargarProductos(){
  
 
@@ -18,12 +21,37 @@ function peticionCargarProductos(){
   xmlhttp.onreadystatechange = function () {//onreadystatechange :metodo de respuesta
       if (xmlhttp.readyState == XMLHttpRequest.DONE) {//Done:termino
           if (xmlhttp.status == 200) {//200:volvio todo bien
-            var productosEncontrados=  JSON.parse(xmlhttp.responseText);
+            var data=  JSON.parse(xmlhttp.responseText);
 
-          console.log(productosEncontrados);
-           
+          console.log(data);
 
-                
+
+          var nombre_columnas = Object.keys(data[0]);
+
+             for (var i = 0; i < nombre_columnas.length; i++) {
+              colum.innerHTML = colum.innerHTML +
+              '<th scope="col">' + nombre_columnas[i] + '</th>'
+            }
+         
+                  colum.innerHTML = colum.innerHTML +
+                    '<th scope="col">Editar</th>' +
+                    '<th scope="col">Borrar</th>' +
+                    '<th scope="col">Actualizar</th>';
+         
+              for (var i = 0; i < data.length; i++) {
+            
+                    con.innerHTML = con.innerHTML +
+                  
+                  '<td class="table-white">' + data[i].id_producto + '</td>' +
+                  '<td class="table-white">' + data[i].categoria + '</td>' +
+                  '<td class="table-white">' + data[i].presentacion+ '</td>' +
+                  '<td class="table-white">' + data[i]. descripcion + '</td>' +
+                  '<td class="table-white">' + data[i].valor + '</td>' +
+                  '<td class="table-white">' + data[i].imagen + '</td>' +
+                  
+                  '</tr>' ;
+
+              }   
 
           }
           else{
