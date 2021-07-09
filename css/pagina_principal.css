@@ -1,0 +1,179 @@
+*{
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body{
+	background: rgba(252, 232, 245, 0.979);
+}
+
+header{
+	width: 100%;
+}
+
+.navegacion{
+	width: 1000px;
+	margin: 30px auto;
+	background: rgba(255, 255, 255, 0.836);
+}
+
+.navegacion ul{
+	list-style: none;
+}
+
+.menu > li{
+	position: relative;
+	display: inline-block;
+}
+
+.menu > li > a{
+	display: block;
+	padding: 15px 14px;
+    color: #800542f6;
+    font-size: 15pt;
+    font-family: 'Open sans';
+    
+	text-decoration: none;
+}
+
+.menu li a:hover{
+	color: rgba(245, 177, 205, 0.925);
+	transition: all .3s;
+}
+
+/* Submenu*/
+
+.submenu{
+	position: absolute;
+	background: #3d2628fa;
+	width: 120%;
+	visibility: hidden;
+	opacity: 0;
+	transition: opacity 1.5s;
+}
+
+.submenu li a{
+	display: block;
+	padding: 15px;
+	color: rgb(255, 235, 249);
+	font-family: 'Open sans';
+	text-decoration: none;
+}
+
+.menu li:hover .submenu{
+	visibility: visible;
+	opacity: 1;
+}
+
+/* formulario*/
+
+* {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0;
+    font-family: sans-serif;
+  }
+
+
+  .formulario {
+    width: 500px;
+    max-width: 100%;
+    margin: auto;
+    margin-top: 30px;
+    padding: 20px;
+    box-shadow: 0 0 20px 1px rgba(0,0,0,0.3);
+    position: relative;
+  }
+  .formulario__titulo {
+    text-align: center;
+    margin-top: 0;
+    color: rgba(0,0,0,0.7);
+  }
+  .formulario__input, .formulario__label, .formulario__submit {
+    display: block;
+    width: 100%;
+    font-size: 1.3em;
+  }
+  .formulario__input {
+    padding: 20px;
+    background: rgba(0,0,0,0.1);
+    border: 1px solid rgba(0,0,0,0.3);
+    margin-bottom: 40px;
+  }
+  .formulario__input:focus {
+    outline: 1px solid rgba(0,0,0,0.7);
+  }
+  .formulario__input:focus + .formulario__label{
+    margin-top: -135px;
+  }
+  .formulario__label {
+    padding-left: 15px;
+    position: absolute;
+    margin-top: -85px;
+    z-index: -20;
+    color: rgba(0,0,0,0.5);
+    transition: all 0.2s;
+  }
+  .formulario__submit {
+    background: rgba(0,0,0,0.7);
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none;
+  }
+  .fijar {
+    margin-top: -135px;
+  }
+  
+/* mensaje de muchas gracias*/  
+
+  .saludo {
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: xx-large;
+    margin-top: 10px;
+    color: rgba(51, 14, 14, 0.986);}
+
+    /*franjas para los titulos-anclas*/
+
+    * {
+        box-sizing: border-box;
+    }
+    
+    .franjas input {
+        display: none;
+    }
+    
+    .franjas__titulo {
+        display: block;
+        padding: 15px;
+        background: #f7a1d0;
+        cursor: pointer;
+        border-bottom: 1px solid #fff;
+    }
+    .franjas__titulo:hover {
+        background: #b64373da;
+    }
+    
+    .franjas__contenido {
+        height: 0;
+        overflow: hidden;
+        margin: 0;
+        transition: all 0.5s;
+        font-size: x-large;
+    }
+    
+    .franjas input:checked ~ .franjas__contenido{
+        height: auto;
+        margin: 15px 0;
+    } 
+
+    /* <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3280.8855987691877!2d-58.3316579847682!3d-34.68283668043906!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a332fe2fc400ab%3A0x7f8dcc901dbe4eea!2sSan%20Isidro%204181%2C%20B1872IEF%20Sarand%C3%AD%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1604467088646!5m2!1ses-419!2sar" 
+    width="400" height="500" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe> */
+
+   
+
