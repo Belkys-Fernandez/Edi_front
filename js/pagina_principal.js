@@ -39,15 +39,15 @@ function peticionCargarProductos(){
           var nombre_columnas = Object.keys(data[0]);
 
              for (var i = 0; i < nombre_columnas.length; i++) {
-               if (data[i].presentacion ="cajas" ){
+             
                 colum.innerHTML = colum.innerHTML +
                 '<th scope="col">' + nombre_columnas[i] + '</th>'
 
-               }else {
+               
                 botel.innerHTML = botel.innerHTML +
                 '<th scope="col">' + nombre_columnas[i] + '</th>'
 
-               }
+               
              
             }
          
