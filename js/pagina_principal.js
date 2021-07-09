@@ -33,10 +33,7 @@ function peticionCargarProductos(){
               '<th scope="col">' + nombre_columnas[i] + '</th>'
             }
          
-                  colum.innerHTML = colum.innerHTML +
-                    '<th scope="col">Editar</th>' +
-                    '<th scope="col">Borrar</th>' +
-                    '<th scope="col">Actualizar</th>';
+                 
          
               for (var i = 0; i < data.length; i++) {
             
@@ -47,7 +44,7 @@ function peticionCargarProductos(){
                   '<td class="table-white">' + data[i].presentacion+ '</td>' +
                   '<td class="table-white">' + data[i]. descripcion + '</td>' +
                   '<td class="table-white">' + data[i].valor + '</td>' +
-                  '<td class="table-white">' + data[i].imagen + '</td>' +
+                  '<td class="table-white"> <img src=" '+ data[i].imagen + ' " >     </td>' +
                   
                   '</tr>' ;
 
