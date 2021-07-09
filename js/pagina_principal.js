@@ -20,6 +20,8 @@ for (var i = 0; i < cajita.length; i++) {/* lo recorro y "cuento" los elementos 
 //FUNCION PARA CARGAR
 let con = document.getElementById('con');
 let colum = document.getElementById('nombre_columnas');
+let pote = document.getElementById('pote');
+let botel  = document.getElementById('botel');
 
 function peticionCargarProductos(){
  
@@ -37,15 +39,23 @@ function peticionCargarProductos(){
           var nombre_columnas = Object.keys(data[0]);
 
              for (var i = 0; i < nombre_columnas.length; i++) {
-              colum.innerHTML = colum.innerHTML +
-              '<th scope="col">' + nombre_columnas[i] + '</th>'
+               if (data[i].presentacion ="cajas" ){
+                colum.innerHTML = colum.innerHTML +
+                '<th scope="col">' + nombre_columnas[i] + '</th>'
+
+               }else {
+                botel.innerHTML = botel.innerHTML +
+                '<th scope="col">' + nombre_columnas[i] + '</th>'
+
+               }
+             
             }
          
                  
          
-              for (var i = 0; i < data.length; i++) {
-            
-                    con.innerHTML = con.innerHTML +
+              for  (var i = 0; i < data.length; i++) {
+                if (data[i].presentacion ="cajas" ){
+                  con.innerHTML = con.innerHTML +
                   
                   '<td class="table-white">' + data[i].id_producto + '</td>' +
                   '<td class="table-white">' + data[i].categoria + '</td>' +
@@ -55,6 +65,22 @@ function peticionCargarProductos(){
                   '<td class="table-white"> <img src=" '+ data[i].imagen + ' "  alt="Girl in a jacket">     </td>' +
                   
                   '</tr>' ;
+
+                }else {
+                  pote.innerHTML = pote.innerHTML +
+                  
+                  '<td class="table-white">' + data[i].id_producto + '</td>' +
+                  '<td class="table-white">' + data[i].categoria + '</td>' +
+                  '<td class="table-white">' + data[i].presentacion+ '</td>' +
+                  '<td class="table-white">' + data[i]. descripcion + '</td>' +
+                  '<td class="table-white">' + data[i].valor + '</td>' +
+                  '<td class="table-white"> <img src=" '+ data[i].imagen + ' "  alt="Girl in a jacket">     </td>' +
+                  
+                  '</tr>' ;
+
+                }
+            
+                 
 
               }   
 
