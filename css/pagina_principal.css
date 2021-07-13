@@ -7,7 +7,7 @@
 }
 
 body{
-	background: rgba(252, 232, 245, 0.979);
+	background: #fefdfffa;
 }
 
 header{
@@ -17,7 +17,7 @@ header{
 .navegacion{
 	width: 1000px;
 	margin: 30px auto;
-	background: rgba(255, 255, 255, 0.836);
+	background: hsla(0, 0%, 100%, 0.836);
 }
 
 .navegacion ul{
@@ -58,7 +58,7 @@ header{
 .submenu li a{
 	display: block;
 	padding: 15px;
-	color: rgb(255, 235, 249);
+	color: rgb(242, 235, 255);
 	font-family: 'Open sans';
 	text-decoration: none;
 }
